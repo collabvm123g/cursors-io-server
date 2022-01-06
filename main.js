@@ -7,7 +7,6 @@ var Timer = require("./Timer.js");
 
 var config = {};
 
-//load configuration from cursors.conf
 function loadConf() {
 	var s = fs.readFileSync("cursors.conf");
 	var i = 0;
@@ -26,17 +25,15 @@ function loadConf() {
 	Configuration.setConfig(config);
 	}
 
-// load levels from a folder
 function loadLevels() {
 	LevelManager.loadLevels();
 	}
 
-// start Websockets server
 function startServer() {
 	Server.init();
 	}
 
-// start timer
+
 function timerInit() {
 	Timer.init();
 	}
